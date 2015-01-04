@@ -1,0 +1,10 @@
+name             'jhdc-mail'
+maintainer       'Jeff Hutchison'
+maintainer_email 'jeff@jeffhutchison.com'
+license          'MIT'
+description      'Installs/Configures email'
+long_description 'Installs/Configures Postfix, Dovecot, Spamassassin.'
+version          '0.1.0'
+
+depends 'postfix'
+depends 'certificate'

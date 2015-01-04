@@ -1,0 +1,4 @@
+ssl = required
+
+ssl_cert = <%= "</etc/pki/tls/certs/#{node['fqdn']}.pem" %>
+ssl_key = <%= "</etc/pki/tls/private/#{node['fqdn']}.key" %>
