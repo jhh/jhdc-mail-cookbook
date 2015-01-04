@@ -4,7 +4,6 @@
 INCLUDERC=/etc/mail/spamassassin/spamassassin-default.rc
 SHELL="/bin/bash"
 SENDMAIL="/usr/sbin/sendmail -oi -t"
-LOGFILE="/var/log/procmail.log"
 DELIVER="/usr/lib/dovecot/deliver"
 # fallback:
 DEFAULT="$HOME/Maildir/"
