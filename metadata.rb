@@ -4,7 +4,7 @@ maintainer_email 'jeff@jeffhutchison.com'
 license          'MIT'
 description      'Installs/Configures email'
 long_description 'Installs/Configures Postfix, Dovecot, Spamassassin.'
-version          '0.1.0'
+version          '0.1.1'
 
 depends 'postfix'
 depends 'certificate'

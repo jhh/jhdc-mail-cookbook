@@ -1,4 +1,4 @@
-force_default['postfix']['use_procmail'] = false
+force_default['postfix']['use_procmail'] = true
 force_default['postfix']['main']['recipient_delimiter'] = '+'
 force_default['postfix']['main']['alias_maps'] = 'hash:/etc/aliases'
 
