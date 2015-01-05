@@ -14,7 +14,19 @@ package 'dovecot'
   end
 end
 
+cookbook_file '/etc/dovecot/local.conf' do
+  source 'dovecot.local.conf'
+    mode '0644'
+    notifies :restart, 'service[dovecot]'
+end
+
 service 'dovecot' do
   supports status: true, restart: true, reload: true
   action :enable
+end
+
+# imaps
+include_recipe 'jhdc-firewall::firewalld'
+jhdc_firewall_port 993 do
+  action :add
 end
