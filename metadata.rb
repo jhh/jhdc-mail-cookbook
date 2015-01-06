@@ -8,4 +8,4 @@ version          '0.3.2'
 
 depends 'postfix'
 depends 'certificate'
-depends 'jhdc-firewall'
+depends 'firewalld'

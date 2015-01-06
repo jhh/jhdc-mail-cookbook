@@ -16,7 +16,9 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-package 'dovecot'
+package 'dovecot' do
+  action :upgrade
+end
 
 %w{master ssl mail}.each do |cfg|
   template "/etc/dovecot/conf.d/10-#{cfg}.conf" do
@@ -38,7 +40,5 @@ service 'dovecot' do
 end
 
 # imaps
-include_recipe 'jhdc-firewall::firewalld'
-jhdc_firewall_port 993 do
-  action :add
-end
+include_recipe 'firewalld::default'
+firewalld_port "993/tcp"

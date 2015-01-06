@@ -19,12 +19,6 @@
 include_recipe 'postfix::server'
 
 # smtp and submission
-include_recipe 'jhdc-firewall::firewalld'
-
-jhdc_firewall_port 25 do
-  action :add
-end
-
-jhdc_firewall_port 587 do
-  action :add
-end
+include_recipe 'firewalld::default'
+firewalld_port "25/tcp"
+firewalld_port "587/tcp"
