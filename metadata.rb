@@ -1,7 +1,7 @@
 name             'jhdc-mail'
 maintainer       'Jeff Hutchison'
 maintainer_email 'jeff@jeffhutchison.com'
-license          'MIT'
+license          'Apache v2.0'
 description      'Installs/Configures email'
 long_description 'Installs/Configures Postfix, Dovecot, Spamassassin.'
 version          '0.3.2'
