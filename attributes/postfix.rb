@@ -23,7 +23,7 @@ force_default['postfix']['main']['smtpd_recipient_restrictions'] =
   "permit_mynetworks permit_sasl_authenticated reject_unauth_destination"
 force_default['postfix']['main']['smtpd_helo_required'] = 'yes'
 force_default['postfix']['main']['smtpd_helo_restrictions'] =
-"permit_mynetworks reject_non_fqdn_helo_hostname reject_invalid_helo_hostname reject_unknown_helo_hostname permit"
+"permit_mynetworks reject_non_fqdn_helo_hostname reject_invalid_helo_hostname permit"
 force_default['postfix']['main']['disable_vrfy_command'] = 'yes'
 # SASL
 force_default['postfix']['main']['smtpd_sasl_type'] = 'dovecot'
