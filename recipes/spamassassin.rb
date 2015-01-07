@@ -19,3 +19,8 @@
 package 'spamassassin' do
   action :upgrade
 end
+
+template '/etc/sysconfig/sa-update' do
+  source 'sa-update.erb'
+  mode '0644'
+end
