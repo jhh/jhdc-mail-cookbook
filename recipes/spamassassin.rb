@@ -20,6 +20,10 @@ package 'spamassassin' do
   action :upgrade
 end
 
+service 'spamassassin' do
+  action [:enable, :start]
+end
+
 template '/etc/sysconfig/sa-update' do
   source 'sa-update.erb'
   mode '0644'
