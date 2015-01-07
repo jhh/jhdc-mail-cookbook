@@ -1,24 +1,27 @@
-jhdc-mail
-=============
+# jhdc-mail
 
-Recipes for installing and configuring  Postfix, Dovecot, and Spamassassin for JHDC.
+Installs `postfix`, `dovecot` and `spamassassin` for JHDC.
 
-Note: non-secure self-signed keys in test directory.
+## Supported Platforms
 
-Contributing
-------------
-1. Fork the project
-2. Create a feature branch corresponding to you change
-3. Commit and test thoroughly
-4. Create a Pull Request on github
+* Centos
 
+### jhdc-nameserver::default
 
-License & Authors
------------------
-- Author:: Jeff Hutchison <jeff@jeffhutchison.com>
+Include `jhdc-mail` in your node's `run_list`:
+
+```json
+{
+  "run_list": [
+    "recipe[jhdc-mail::default]"
+  ]
+}
+```
+
+## License and Authors
 
 ```text
-Copyright 2015, Jeff Hutchison
+Copyright 2015 Jeff Hutchison <jeff@jeffhutchison.com>
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
