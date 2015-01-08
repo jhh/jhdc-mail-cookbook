@@ -16,8 +16,12 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-package 'spamassassin' do
-  action :upgrade
+include_recipe 'yum-epel::default'
+
+%w(spamassassin perl-Razor-Agent perl-Digest-SHA1).each do |p|
+  package p do
+    action :upgrade
+  end
 end
 
 service 'spamassassin' do
