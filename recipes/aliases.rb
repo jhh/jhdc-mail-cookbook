@@ -16,7 +16,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-node.default['postfix']['aliases'] = {
+pseudo_accounts = {
   'mailer-daemon' =>  'postmaster',
   'bin' =>            'root',
   'daemon' =>         'root',
@@ -93,5 +93,10 @@ node.default['postfix']['aliases'] = {
   'sales' =>          'postmaster',
   'support' =>        'postmaster',
 }
+
+node.override['postfix']['aliases'] = pseudo_accounts.merge(node['jhdc_mail']['aliases'])
+
+require 'pp'
+pp node.debug_value('postfix', 'aliases')
 
 include_recipe 'postfix::aliases'

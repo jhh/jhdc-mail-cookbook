@@ -15,3 +15,6 @@ suites:
     run_list:
       - recipe[jhdc-mail::default]
     attributes:
+      jhdc_mail:
+        aliases:
+          alice: charlie

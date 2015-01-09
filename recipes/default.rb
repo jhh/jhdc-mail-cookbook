@@ -22,5 +22,3 @@ include_recipe 'jhdc-mail::postfix'
 include_recipe 'jhdc-mail::spamassassin'
 include_recipe 'jhdc-mail::procmail'
 include_recipe 'jhdc-mail::aliases'
-
-package 'mailx'
