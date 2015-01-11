@@ -96,7 +96,4 @@ pseudo_accounts = {
 
 node.override['postfix']['aliases'] = pseudo_accounts.merge(node['jhdc_mail']['aliases'])
 
-require 'pp'
-pp node.debug_value('postfix', 'aliases')
-
 include_recipe 'postfix::aliases'
