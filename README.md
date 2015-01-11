@@ -1,4 +1,6 @@
 # jhdc-mail
+[![Build Status](https://travis-ci.org/jhh/jhdc-mail-cookbook.svg?branch=master)](https://travis-ci.org/jhh/jhdc-mail-cookbook)
+
 
 Installs `postfix`, `dovecot` and `spamassassin` for JHDC.
 
