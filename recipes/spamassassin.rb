@@ -18,7 +18,14 @@
 
 include_recipe 'yum-epel::default'
 
-%w(spamassassin perl-Razor-Agent perl-Digest-SHA1).each do |p|
+%w(
+spamassassin
+perl-Razor-Agent
+perl-Digest-SHA1
+perl-Net-Patricia
+perl-Geo-IP
+perl-DBI
+).each do |p|
   package p do
     action :upgrade
   end
