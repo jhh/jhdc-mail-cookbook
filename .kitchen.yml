@@ -5,8 +5,11 @@ driver:
 provisioner:
   name: chef_zero
 
+# test cert installed using fqdn for name, so rename
+# test/integration/default/data_bags/certificates/default-centos-72.json
+# if updating
 platforms:
-  - name: centos-7.1
+  - name: centos-7.2
 
 suites:
   - name: default
